@@ -1,0 +1,14 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      #　依存ライブラリをインストール
+      - npm install 
+  build:
+    commands:
+      # ビルドを実行し、buildディレクトリに出力
+      - npm run build 
+artifacts:
+  #ビルドされたファイルをアーティファクトとして指定
+  - build/**/* 
